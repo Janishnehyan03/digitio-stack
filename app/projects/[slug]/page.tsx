@@ -1,10 +1,10 @@
 // app/projects/[slug]/page.tsx
 
-import { projectsData } from '@/lib/projects';
-import { notFound } from 'next/navigation';
-import Image from 'next/image';
-import Link from 'next/link';
-import { ExternalLink, Github } from 'lucide-react';
+import { projectsData } from "@/lib/projects";
+import { ExternalLink } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { notFound } from "next/navigation";
 
 export function generateStaticParams() {
   return projectsData.map((project) => ({
@@ -12,8 +12,13 @@ export function generateStaticParams() {
   }));
 }
 
-export default function ProjectDetailPage({ params }: { params: { slug: string } }) {
-  const project = projectsData.find((p) => p.slug === params.slug);
+export default async function ProjectDetailPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const project = projectsData.find((p) => p.slug === slug);
 
   if (!project) {
     notFound();
@@ -29,8 +34,9 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
               {project.title}
             </span>
           </h1>
-          <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-6">{project.description}</p>
-         
+          <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-6">
+            {project.description}
+          </p>
         </div>
 
         {/* Action Buttons */}
@@ -47,7 +53,6 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
               Live Demo
             </Link>
           )}
-          
         </div>
 
         {/* Zigzag Feature Layout */}
@@ -57,19 +62,28 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
               key={feature.title}
               // The `lg:flex-row-reverse` class is applied to odd-indexed items
               className={`flex flex-col lg:flex-row items-center gap-8 lg:gap-16 ${
-                index % 2 !== 0 ? 'lg:flex-row-reverse' : ''
+                index % 2 !== 0 ? "lg:flex-row-reverse" : ""
               }`}
             >
               {/* Text Content */}
               <div className="lg:w-1/2">
-                <h2 className="text-3xl font-bold text-white mb-4">{feature.title}</h2>
-                <p className="text-gray-300 leading-relaxed">{feature.description}</p>
+                <h2 className="text-3xl font-bold text-white mb-4">
+                  {feature.title}
+                </h2>
+                <p className="text-gray-300 leading-relaxed">
+                  {feature.description}
+                </p>
               </div>
 
               {/* Image Content */}
               <div className="lg:w-1/2 w-full">
                 <div className="relative aspect-video rounded-lg overflow-hidden border border-gray-700/50 shadow-lg">
-                  <Image src={feature.image} alt={feature.title} layout="fill" objectFit="cover" />
+                  <Image
+                    src={feature.image}
+                    alt={feature.title}
+                    layout="fill"
+                    objectFit="cover"
+                  />
                 </div>
               </div>
             </div>

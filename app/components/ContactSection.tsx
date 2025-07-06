@@ -36,7 +36,7 @@ export const ContactSection = () => {
     <section id="contact" className="py-20 bg-black">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl font-bold text-center text-white mb-8">
-          Let's Build Something <span className="text-teal-400">Amazing</span>
+          Let&#39;s Build Something <span className="text-teal-400">Amazing</span>
         </h2>
         <p className="text-lg text-gray-400 text-center mb-12 max-w-2xl mx-auto">
           Have a project in mind or just want to say hello? Send me a WhatsApp

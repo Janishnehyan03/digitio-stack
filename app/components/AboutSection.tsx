@@ -27,7 +27,7 @@ export const AboutSection = () => {
               The Developer Behind the <span className="text-teal-400">Stack</span>
             </h2>
             <p className="text-gray-300 mb-6 text-lg">
-              Hi, I'm the creator of Digitio Stack. With a passion for clean code and beautiful design, I specialize in building high-performance websites and applications that not only look great but also provide meaningful value to users.
+              Hi, I&#39;m the creator of Digitio Stack. With a passion for clean code and beautiful design, I specialize in building high-performance websites and applications that not only look great but also provide meaningful value to users.
             </p>
             <ul className="space-y-3 text-gray-300">
               <li className="flex items-center">
