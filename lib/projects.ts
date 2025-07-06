@@ -302,7 +302,7 @@ export const projectsData: Project[] = [
   },
   {
     slug: "library-website",
-    title: "Modern Library Management System",
+    title: "Library Management System",
     description:
       "A responsive and user-friendly library platform for readers, librarians, and administrators to manage books, users, circulation, and more.",
     image: "/images/library/1.png",
@@ -400,6 +400,82 @@ export const projectsData: Project[] = [
       },
     ],
     liveUrl: "https://dbl-client.vercel.app/", // This one has no password, so the button will show
-    
+  },
+  {
+    slug: "college-portal",
+    title: "College Admin & Management Portal",
+    description:
+      "A complete administrative solution for educational institutions to manage students, study centers, faculty, exams, and results with efficiency and precision.",
+    image: "/images/college/1.png",
+    tags: ["Next.js", "React", "Node.js", "MongoDB", "Tailwind CSS"],
+    features: [
+      {
+        title: "Centralized Admin Dashboard",
+        description:
+          "A command center for administrators, offering a high-level overview and quick, icon-based navigation to all key management modules.",
+        image: "/images/college/1.png",
+      },
+      {
+        title: "Study Center Management",
+        description:
+          "Efficiently manage all affiliated study centers. View, add, or update center details including contact information, location, and affiliation status.",
+        image: "/images/college/2.png",
+      },
+      {
+        title: "Comprehensive Student Management",
+        description:
+          "Oversee the entire student database with powerful filtering options by study center and class, and view detailed academic and personal records.",
+        image: "/images/college/3.png",
+      },
+      {
+        title: "Subject & Curriculum Management",
+        description:
+          "Define the academic curriculum by adding and managing subjects. Assign unique codes, link them to specific classes, and set total marks for evaluation.",
+        image: "/images/college/4.png",
+      },
+      {
+        title: "Teacher & Staff Management",
+        description:
+          "Maintain a complete directory of all teachers and staff members. Admins can filter the list by study center and export the data for reporting.",
+        image: "/images/college/5.png",
+      },
+      {
+        title: "Class & Course Management",
+        description:
+          "Organize the academic structure by easily creating, editing, and managing all classes and courses offered within the institution.",
+        image: "/images/college/6.png",
+      },
+      {
+        title: "Dynamic Exam Management",
+        description:
+          "Create and configure examinations for different academic years. Set exam names, define maximum marks, and toggle exam activation status.",
+        image: "/images/college/7.png",
+      },
+      {
+        title: "Result Publication & Analysis",
+        description:
+          "Streamline the process of publishing exam results. Admins can filter results by exam and college and export the entire dataset to Excel for analysis.",
+        image: "/images/college/8.png",
+      },
+      {
+        title: "Centralized Download Center",
+        description:
+          "A dedicated portal for uploading and distributing important documents like application forms, syllabi, and official circulars.",
+        image: "/images/college/9.png",
+      },
+      {
+        title: "Instant Notification System",
+        description:
+          "Keep students and staff informed by creating and broadcasting real-time notifications and announcements directly through the admin panel.",
+        image: "/images/college/10.png",
+      },
+      {
+        title: "Summative Assessment Management",
+        description:
+          "Manage Formative/Summative Assessment (FA/SA) marks for students, crucial for continuous evaluation and final grade calculations.",
+        image: "/images/college/11.png",
+      },
+    ],
+    liveUrl: "",
   },
 ];

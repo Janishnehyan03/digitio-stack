@@ -5,10 +5,13 @@ import Link from "next/link";
 import { projectsData, Project } from "@/lib/projects"; // Import data from our new file
 
 const ProjectCard = ({ project }: { project: Project }) => (
-  // The entire card is now a link to the project's detail page
-  <Link href={`/projects/${project.slug}`}>
-    <div className="bg-gray-900 rounded-lg overflow-hidden border border-gray-700/50 hover:border-teal-500/80 transition-all duration-300 group cursor-pointer">
-      <div className="relative h-52">
+  <Link href={`/projects/${project.slug}`} className="block h-full">
+    {/* 
+      1. Use flex and flex-col to stack items vertically.
+      2. Use h-full to make the card fill the entire grid cell height.
+    */}
+    <div className="flex flex-col h-full bg-gray-900 rounded-lg overflow-hidden border border-gray-700/50 hover:border-teal-500/80 transition-all duration-300 group cursor-pointer">
+      <div className="relative h-52 flex-shrink-0">
         <Image
           src={project.image}
           alt={project.title}
@@ -17,15 +20,25 @@ const ProjectCard = ({ project }: { project: Project }) => (
           className="transition-transform duration-300 group-hover:scale-105"
         />
       </div>
-      <div className="p-6">
+      {/* 
+        3. Use flex-grow to make this content area expand and fill any remaining vertical space.
+      */}
+      <div className="p-6 flex flex-col flex-grow">
         <h3 className="text-xl font-semibold text-white mb-2">
           {project.title}
         </h3>
-        <p className="text-gray-400 text-sm">{project.description}</p>
+        {/* 
+          4. (Optional but recommended) Truncate long descriptions to prevent awkward text wrapping.
+             This requires the line-clamp plugin (see below).
+        */}
+        <p className="text-gray-400 text-sm line-clamp-3">
+          {project.description}
+        </p>
       </div>
     </div>
   </Link>
 );
+
 
 export const ProjectsSection = () => {
   return (
