@@ -71,7 +71,60 @@ export const projectsData: Project[] = [
         image: "/images/business/7.png",
       },
     ],
-    liveUrl: "https://nexora-zeta-tan.vercel.app/", // This one has no password, so the button will show
+    liveUrl: "https://nexoraglobal.info/", // This one has no password, so the button will show
+  },
+  {
+    slug: "omas-restaurant",
+    title: "Oma's Restaurant",
+    description:
+      "A responsive restaurant website with a modern design. Features include menu display, reservation system, and contact information. Built with React, Firebase, and Material-UI.",
+    image: "/images/omas/1.png",
+    tags: ["React", "Chart.js", "Firebase", "Material-UI"],
+    features: [
+      {
+        title: "Hero Section",
+        description:
+          "A captivating hero section with a high-quality banner image or video that instantly conveys the restaurant’s ambiance and specialties, featuring a strong call-to-action.",
+        image: "/images/omas/1.png",
+      },
+      {
+        title: "About",
+        description:
+          "An engaging section that tells the story of the restaurant, its mission, and core values, creating a personal connection with visitors.",
+        image: "/images/omas/2.png",
+      },
+      {
+        title: "Signature Items",
+        description:
+          "A beautifully presented showcase of the restaurant's signature dishes with enticing images and descriptions to attract food lovers.",
+        image: "/images/omas/3.png",
+      },
+      {
+        title: "Store Locations",
+        description:
+          "An easy-to-navigate section listing all restaurant branches with maps, contact details, and opening hours for customer convenience.",
+        image: "/images/omas/4.png",
+      },
+      {
+        title: "Testimonials",
+        description:
+          "A dedicated area for authentic customer testimonials and reviews to build trust and credibility with potential guests.",
+        image: "/images/omas/5.png",
+      },
+      {
+        title: "Gallery",
+        description:
+          "A visually rich gallery showcasing the restaurant’s ambiance, events, and culinary creations to entice visitors.",
+        image: "/images/omas/6.png",
+      },
+      {
+        title: "Party Booking",
+        description:
+          "A streamlined party or event booking feature that allows users to easily reserve spaces for special occasions directly through the website.",
+        image: "/images/omas/party-booking.png",
+      },
+    ],
+    liveUrl: "https://www.omasrestaurant.com/",
   },
   {
     slug: "abaya-website",
