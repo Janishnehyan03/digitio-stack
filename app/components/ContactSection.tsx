@@ -31,16 +31,16 @@ export const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden bg-[radial-gradient(1200px_600px_at_10%_-10%,rgba(16,185,129,0.12),rgba(0,0,0,0)),radial-gradient(900px_500px_at_90%_10%,rgba(20,184,166,0.08),rgba(0,0,0,0))] py-20 md:py-24"
+      className="relative overflow-hidden bg-white py-20 md:py-24"
       aria-label="Contact"
     >
       {/* Subtle grid overlay */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-[0.06]"
+        className="pointer-events-none absolute inset-0 opacity-[0.1]"
         style={{
           backgroundImage:
-            "linear-gradient(to right, rgba(255,255,255,0.12) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.12) 1px, transparent 1px)",
+            "linear-gradient(to right, rgba(0,0,0,0.12) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,0,0,0.12) 1px, transparent 1px)",
           backgroundSize: "36px 36px",
           maskImage: "radial-gradient(800px 400px at 50% 0%, black, transparent)",
           WebkitMaskImage: "radial-gradient(800px 400px at 50% 0%, black, transparent)",
@@ -49,23 +49,23 @@ export const ContactSection = () => {
 
       {/* Background glows */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-emerald-500/10 blur-3xl" />
+        <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-teal-500/10 blur-3xl" />
         <div className="absolute -bottom-44 -left-44 h-96 w-96 rounded-full bg-teal-500/10 blur-3xl" />
       </div>
 
       <div className="container relative z-10 mx-auto px-6">
-        <h2 className="mb-3 text-center text-4xl font-extrabold tracking-tight text-white md:text-5xl">
+        <h2 className="mb-3 text-center text-4xl font-extrabold tracking-tight text-neutral-900 md:text-5xl">
           Let{"'"}s Build Something{" "}
-          <span className="bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-500 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-teal-400 via-teal-600 to-teal-500 bg-clip-text text-transparent">
             Amazing
           </span>
         </h2>
-        <p className="mx-auto mb-10 max-w-2xl text-center text-lg text-neutral-400 md:mb-12">
+        <p className="mx-auto mb-10 max-w-2xl text-center text-lg text-neutral-600 md:mb-12">
           Have a project in mind or just want to say hello? Send me a WhatsApp message directly!
         </p>
 
         {/* Form card */}
-        <div className="mx-auto max-w-xl rounded-2xl border border-neutral-800 bg-neutral-900/60 p-6 shadow-2xl ring-1 ring-emerald-500/10 backdrop-blur md:p-8">
+        <div className="mx-auto max-w-xl rounded-2xl border border-neutral-200 bg-white p-6 shadow-xl ring-1 ring-teal-500/10 md:p-8">
           <form onSubmit={handleSubmit} className="space-y-6" noValidate>
             <div>
               <label htmlFor="name" className="sr-only">
@@ -77,7 +77,7 @@ export const ContactSection = () => {
                 name="name"
                 placeholder="Your Name"
                 required
-                className="w-full rounded-xl border border-neutral-800 bg-neutral-950/60 px-4 py-3 text-white shadow-inner outline-none transition-all placeholder:text-neutral-500 focus:border-emerald-500/50 focus:ring-2 focus:ring-emerald-500/30"
+                className="w-full rounded-xl border border-neutral-300 bg-neutral-100 px-4 py-3 text-neutral-800 shadow-inner outline-none transition-all placeholder:text-neutral-500 focus:border-teal-500/50 focus:ring-2 focus:ring-teal-500/30"
               />
             </div>
             <div>
@@ -90,7 +90,7 @@ export const ContactSection = () => {
                 name="email"
                 placeholder="Your Email"
                 required
-                className="w-full rounded-xl border border-neutral-800 bg-neutral-950/60 px-4 py-3 text-white shadow-inner outline-none transition-all placeholder:text-neutral-500 focus:border-emerald-500/50 focus:ring-2 focus:ring-emerald-500/30"
+                className="w-full rounded-xl border border-neutral-300 bg-neutral-100 px-4 py-3 text-neutral-800 shadow-inner outline-none transition-all placeholder:text-neutral-500 focus:border-teal-500/50 focus:ring-2 focus:ring-teal-500/30"
               />
             </div>
             <div>
@@ -103,14 +103,14 @@ export const ContactSection = () => {
                 placeholder="Your Message"
                 rows={5}
                 required
-                className="w-full resize-none rounded-xl border border-neutral-800 bg-neutral-950/60 px-4 py-3 text-white shadow-inner outline-none transition-all placeholder:text-neutral-500 focus:border-emerald-500/50 focus:ring-2 focus:ring-emerald-500/30"
+                className="w-full resize-none rounded-xl border border-neutral-300 bg-neutral-100 px-4 py-3 text-neutral-800 shadow-inner outline-none transition-all placeholder:text-neutral-500 focus:border-teal-500/50 focus:ring-2 focus:ring-teal-500/30"
               />
             </div>
 
             <div className="text-center">
               <button
                 type="submit"
-                className="group relative mx-auto inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 px-8 py-3 font-semibold text-white shadow-lg shadow-emerald-500/10 ring-1 ring-emerald-500/30 transition-all hover:from-emerald-500/90 hover:to-teal-500/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/60"
+                className="group relative mx-auto inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-teal-500 to-teal-600 px-8 py-3 font-semibold text-white shadow-lg shadow-teal-500/20 ring-1 ring-teal-500/30 transition-all hover:from-teal-500 hover:to-teal-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60"
               >
                 {/* Shimmer */}
                 <span className="pointer-events-none absolute inset-0 -skew-x-12 bg-gradient-to-r from-transparent via-white/15 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
@@ -127,7 +127,7 @@ export const ContactSection = () => {
             <p
               role="status"
               aria-live="polite"
-              className="mt-6 rounded-xl border border-neutral-800 bg-neutral-900/60 p-3 text-center text-sm text-neutral-300"
+              className="mt-6 rounded-xl border border-neutral-200 bg-neutral-100 p-3 text-center text-sm text-neutral-600"
             >
               {status}
             </p>
